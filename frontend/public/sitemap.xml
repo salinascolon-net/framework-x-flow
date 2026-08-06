@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace the domain below with your live domain before launch. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.frameworkxflow.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.frameworkxflow.com/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.frameworkxflow.com/approach</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.frameworkxflow.com/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.frameworkxflow.com/insights</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.frameworkxflow.com/book</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.frameworkxflow.com/contact</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.frameworkxflow.com/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.frameworkxflow.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>
