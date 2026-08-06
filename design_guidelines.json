@@ -1,0 +1,118 @@
+{
+  "theme": "Light",
+  "archetype": "Swiss Editorial meets Organic Blueprint",
+  "typography": {
+    "headings": {
+      "family": "Sora, sans-serif",
+      "weights": ["300", "400", "700"],
+      "usage": "Massive scale for heroes (text-6xl+), tight tracking (tracking-tighter). Used for primary section titles and kinetic text.",
+      "styles": "No Inter for headings. Use Sora for a distinct geometric, editorial edge."
+    },
+    "body": {
+      "family": "Inter, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Clean, highly readable text-base or text-lg for paragraphs. Loose line height (leading-relaxed)."
+    },
+    "accents": {
+      "family": "Inter, sans-serif",
+      "usage": "Uppercase, tracking-[0.2em], text-xs or text-sm for labels, node identifiers, overlines, and architectural annotations."
+    }
+  },
+  "colors": {
+    "primary": { "hex": "#194D4A", "name": "Deep Teal", "usage": "Buttons, active states, key data nodes" },
+    "background": { "hex": "#F6F3EC", "name": "Warm Ivory", "usage": "Global page background" },
+    "text": { "hex": "#151A18", "name": "Near-Black", "usage": "Primary typography, main headings, heavy contrast lines" },
+    "support": { "hex": "#A9B7A7", "name": "Muted Sage", "usage": "Secondary background panels, subtle highlights, muted editorial blocks" },
+    "accent": { "hex": "#C96846", "name": "Terracotta", "usage": "Hover interactions, 'X' motif highlights, urgent CTAs, line intersections" },
+    "border": { "hex": "#D9D7D0", "name": "Soft Border", "usage": "Grid lines, component outlines, architectural dividers" },
+    "surface": { "hex": "#FFFFFF", "name": "White Cards", "usage": "Elevated cards, form containers, distinct workflow nodes" }
+  },
+  "visual_enhancers": [
+    "The 'X' Motif: Use absolute positioning to place tiny '+' or 'x' marks (using text or SVG) at the intersections of grid lines.",
+    "Blueprint Lines: Use 1px solid borders (#D9D7D0) that extend fully to the edges of the screen (using grid or absolute spans) to create an architectural, wireframe feel.",
+    "Editorial Spacing: Massive padding between sections (py-32). Negative space is crucial for the luxury consulting feel.",
+    "Node Labels: Small floating labels on images or cards (e.g., 'Fig. 1', 'Node A') to reinforce the systems studio vibe."
+  ],
+  "components": {
+    "cards": "Flat, White (#FFFFFF), 1px solid border (#D9D7D0), 0px or 4px border-radius. No generic drop shadows. Instead, use a hard 4px offset shadow in Deep Teal on hover for an editorial tactile feel.",
+    "buttons": "Sharp corners or subtle 2px rounding. Default: Deep Teal bg, White text. Hover: Terracotta bg, White text. Include a subtle arrow icon that translates right on hover.",
+    "inputs": "Shadcn default inputs but remove rounded corners (rounded-none), use #D9D7D0 for borders, and #194D4A for focus rings. Minimalist form styling.",
+    "navigation": "Solid background (#F6F3EC) or highly saturated crystal glass (bg-[#F6F3EC]/80 backdrop-blur-xl). Bottom border #D9D7D0. Links in near-black, hover terracotta.",
+    "footer": "Dark mode flipped. Background Near-Black (#151A18), text Warm Ivory (#F6F3EC). Massive type for the brand name, strict grid for links."
+  },
+  "grids_and_layouts": {
+    "global_grid": "12-column CSS Grid. Emphasize asymmetry. Do not center everything. Left-align most text.",
+    "bento_blueprint": "Use the Mode A 'Tetris' Grid for the Approach section. Mix large structural images with small text blocks to create tension.",
+    "borders": "Expose the skeleton. Give containers border-r and border-b using the soft border color to create a continuous table/grid look across sections."
+  },
+  "motion": {
+    "smooth_scroll": "MANDATORY: Implement @studio-freight/react-lenis for buttery smooth scrolling. Standard scroll feels cheap.",
+    "kinetic_hero": "MANDATORY: Line-by-line staggered reveal. Split text into visual lines, wrap in overflow-hidden divs, and stagger translate-y from 100% to 0 using framer-motion variants.",
+    "editorial_marquee": "Use react-fast-marquee. Slow, smooth drift. Near-black uppercase text with wide tracking, separated by the 'X' motif or bullet points.",
+    "scroll_reveals": "Framer motion `whileInView` with `viewport={{ once: true, margin: '-100px' }}`. Subtle Y-axis slide (20px) and fade in.",
+    "parallax": "Use Framer Motion `useScroll` and `useTransform` to slightly move hero images or background grid nodes at a different speed than the scroll."
+  },
+  "accessibility": {
+    "contrast": "Ensure Near-Black on Warm Ivory passes WCAG AAA. White text on Deep Teal is AA+. Terracotta on White is AA.",
+    "reduced_motion": "Wrap all framer-motion transitions with a `prefers-reduced-motion` check or use standard CSS media queries for base animations.",
+    "testing": "All interactive elements MUST include `data-testid` attributes (e.g., `data-testid='book-call-button'`)."
+  },
+  "media": {
+    "icons": "lucide-react. Set strokeWidth to 1.5. Use geometric icons (ArrowRight, MoveDiagonal, Crosshair, Grid, Box).",
+    "3d_libraries": "Framer Motion 3D for subtle scrolling transformations. Avoid heavy 3D 'glowing brains' or generic tech gears as requested.",
+    "image_urls": [
+      {
+        "url": "https://images.unsplash.com/photo-1522404419647-18cb51cc5c7a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwYXJjaGl0ZWN0dXJhbCUyMGxpbmVzJTIwaW50ZXJzZWN0aW9ufGVufDB8fHx8MTc4NjA1NzAyNnww&ixlib=rb-4.1.0&q=85",
+        "category": "Hero Section",
+        "description": "Abstract white concrete lines against teal sky. Perfect for the 'Intersection/X' structural motif."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1665779736808-047a6bbf43a0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwzfHxtaW5pbWFsJTIwYXJjaGl0ZWN0dXJhbCUyMGxpbmVzJTIwaW50ZXJzZWN0aW9ufGVufDB8fHx8MTc4NjA1NzAyNnww&ixlib=rb-4.1.0&q=85",
+        "category": "Approach / Method Visual",
+        "description": "Minimal architectural ridges. Use in the Map -> Frame -> Build -> Flow section."
+      },
+      {
+        "url": "https://images.pexels.com/photos/8250897/pexels-photo-8250897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "Services / Systems Clarity Assessment",
+        "description": "Top view of minimalist notepad and pencil, representing clear planning and assessment."
+      },
+      {
+        "url": "https://images.pexels.com/photos/14696284/pexels-photo-14696284.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "Insights / Substack Field Notes",
+        "description": "Stylish minimal setup with a laptop and magazine, fitting the editorial field notes vibe."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1776482128000-14cda1ad9e3f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHw0fHxlZGl0b3JpYWwlMjB3b3Jrc3BhY2UlMjBjYWxtJTIwbWluaW1hbHxlbnwwfHx8fDE3ODYwNTcwMjZ8MA&ixlib=rb-4.1.0&q=85",
+        "category": "About / Founder Placeholder",
+        "description": "Elegant home office desk. Acts as an environmental placeholder for the founder instead of a fake photo."
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Do not use generic SaaS dashboard vectors, gears, or glowing AI brains.",
+    "Install and use `lenis` for smooth scrolling. This is required for the premium Awwwards feel.",
+    "Install `framer-motion` for kinetic typography and scroll reveals.",
+    "Install `react-fast-marquee` for the editorial scrolling text strip.",
+    "For the Hero Section, create a staggered line-by-line reveal animation using framer-motion variants on overflow-hidden containers.",
+    "Use Shadcn components for complex interactions (Accordion for FAQ, Form for Contact) but strip their default styling. Apply the #FFFFFF background, #D9D7D0 borders, and flat designs (no large shadow blurs).",
+    "For the TidyCal embed, create a responsive container that loads the inline widget script, with a styled fallback button just in case.",
+    "Use 1px grid borders heavily to create an architectural 'blueprint' aesthetic. Use the 'X' symbol subtly at grid intersections.",
+    "Ensure all code is written in `.js` / `.jsx` as per environment constraints. Do not use `.tsx` syntax."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) only where it makes sense (e.g., sticky headers). For this brand, prefer solid architectural panels.",
+    "You MUST NOT apply universal transition. Eg: `transition: all`. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, ie do not add `.App { text-align: center; }` in the css file. This disrupts the human natural reading flow of text.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN.",
+    "All interactive and key informational elements MUST include a `data-testid` attribute to facilitate robust automated testing."
+  ]
+}
