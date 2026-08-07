@@ -31,17 +31,6 @@ export default function HeroVisual() {
           <circle cx="6" cy="33" r="1.1" fill="#C96846" />
         </svg>
       </motion.div>
-
-      {/* floating node label card */}
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute -bottom-6 -left-4 hidden border border-hairline bg-ink px-5 py-4 text-ivory sm:block"
-      >
-        <p className="text-[10px] uppercase tracking-[0.2em] text-ivory/50">The X</p>
-        <p className="mt-1 text-sm">Where structure meets flow</p>
-      </motion.div>
     </div>
   );
 }
